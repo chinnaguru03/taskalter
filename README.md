@@ -1,4 +1,5 @@
 🚀 Custom URL Shortener API
+
 A scalable URL Shortener API built with Node.js, Express.js, MongoDB, and Redis, featuring:
 
 Google Sign-In Authentication
@@ -8,9 +9,11 @@ Advanced Analytics for tracking clicks, devices, and OS
 Docker Support for containerized deployment
 
 🌐 Live Demo
+
 🚀 Deployed Link 
 
 📋 Table of Contents
+
 Features
 Tech Stack
 Getting Started
@@ -21,6 +24,7 @@ Challenges Faced
 License
 
 🎯 Features
+
 ✅ Google Sign-In Authentication (OAuth 2.0)
 ✅ Shorten Long URLs with optional custom aliases
 ✅ Topic-Based Grouping (Acquisition, Activation, Retention, etc.)
@@ -34,6 +38,7 @@ License
 ✅ Dockerized for easy deployment
 
 🛠️ Tech Stack
+
 Backend: Node.js, Express.js
 Database: MongoDB
 Caching: Redis
@@ -42,41 +47,48 @@ Rate Limiting: express-rate-limit
 Deployment: Docker (optional)
 
 🚀 Getting Started
+
 1️⃣ Clone the Repository
-git clone https://github.com/your-username/url-shortener.git
-cd url-shortener
+git clone https://github.com/chinnaguru03/taskalter.git
+cd taskalter
+
 2️⃣ Install Dependencies
 npm install
+
 3️⃣ Setup Environment Variables
 PORT=3000
-MONGO_URI=mongodb://localhost:27017/urlshortener
+MONGO_URI=mongodb://localhost:27017/taskalter
 REDIS_HOST=localhost
 REDIS_PORT=6379
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 JWT_SECRET=your_jwt_secret
+
 4️⃣ Start the Application
 # For development
 npm run dev
+The server will run at: http://localhost:3000
 # For production
 npm start
-The server will run at: http://localhost:3000
 
 🔐 Environment Variables
+
 Variable	            Description
 PORT	                Server port
 MONGO_URI	            MongoDB connection string
-REDIS_HOST	            Redis host (default: localhost)
-REDIS_PORT	            Redis port (default: 6379)
+REDIS_HOST	          Redis host (default: localhost)
+REDIS_PORT	          Redis port (default: 6379)
 GOOGLE_CLIENT_ID	    Google OAuth Client ID
 GOOGLE_CLIENT_SECRET	Google OAuth Client Secret
-JWT_SECRET	            JWT secret for token generation
+JWT_SECRET	          JWT secret for token generation
 
 📊 API Endpoints
+
 1️⃣ Authentication
 Google Sign-In:
 GET /auth/google
 GET /auth/google/callback
+
 2️⃣ URL Shortening
 Create Short URL:
 POST /api/shorten
@@ -118,11 +130,13 @@ Exceeding the limit returns:
 }
 
 📦 Deployment (Optional with Docker)
+
 1️⃣ Build and Run with Docker
 docker-compose up --build
 The app will run at http://localhost:3000.
 
 ⚠️ Challenges Faced
+
 1.Rate Limiting Conflicts:
 Solved using express-rate-limit with role-based middleware for flexibility.
 
@@ -136,8 +150,10 @@ Optimized MongoDB queries using aggregation pipelines and Redis caching for real
 Debugged callback URLs and token expiration problems using passport-google-oauth20.
 
 📄 License
+
 This project is licensed under the MIT License.
 
 🚀 Contributions
+
 Feel free to submit pull requests or open issues if you'd like to contribute.
 Happy Coding! 💻✨
