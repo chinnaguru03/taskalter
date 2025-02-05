@@ -19,6 +19,10 @@ app.use('/auth', authRoutes);
 app.use('/api', urlRoutes);
 app.use('/', analyticsRoutes);
 
+app.get('/', (req, res) => {
+  res.send('🚀 Welcome to the Custom URL Shortener API!');
+});
+
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.error(err));

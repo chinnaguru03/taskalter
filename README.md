@@ -10,7 +10,7 @@ Docker Support for containerized deployment
 
 🌐 Live Demo
 
-🚀 Deployed Link 
+🚀 Deployed Link https://taskalter.onrender.com/
 
 📋 Table of Contents
 
